@@ -7,10 +7,11 @@ const App = () => {
   const [userName, setUserName] = useState('Default')
 
   useEffect(() => {
-    fetch('http://localhost:3001/api')
+    fetch('http://0.0.0.0:3001/api')
     .then((res) => {
       res.json().then((result) => {setUserName(result.userName)})
     })
+    .catch((err) => {setUserName('ERROR!')})
   })
 
   return (
