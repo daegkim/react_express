@@ -7,7 +7,7 @@ const App = () => {
   const [userName, setUserName] = useState('Default')
 
   useEffect(() => {
-    fetch('http://0.0.0.0:3001/api')
+    fetch('http://ec2-13-125-198-77.ap-northeast-2.compute.amazonaws.com:3001/api')
     .then((res) => {
       res.json().then((result) => {setUserName(result.userName)})
     })
